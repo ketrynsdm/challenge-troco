@@ -1,4 +1,4 @@
-    function moedas(trocoMoedas: number){
+export function moedas(trocoMoedas: number){
         var notas = [100, 50, 20, 10, 5, 2, 1, 0.5, 0.25, 0.1, 0.05]
         // Troco é um objeto, associando notas com a quantidade necessária
         var troco:any = {'100': 0, '50': 0, '20': 0, '10': 0, '5': 0, '2': 0, '1': 0, '0.5': 0, '0.25': 0, '0.1': 0, '0.05': 0,}
@@ -25,14 +25,15 @@
         
     }
     
-    function result(valorDoProduto:number, pago:number){        
+    export  function result(valorDoProduto:number, pago:number){        
             console.log('Valor do produto: R$' + valorDoProduto);
             console.log('Valor pago: R$' + pago);
             console.log('Resultado esperado: ');
             moedas(pago - valorDoProduto)
+            return pago - valorDoProduto
     }
 
-    result(21.99, 25)
+    // result(21.99, 25)
     
 
     

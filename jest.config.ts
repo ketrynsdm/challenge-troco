@@ -24,6 +24,16 @@ export default {
 
   // The directory where Jest should output its coverage files
   coverageDirectory: "coverage",
+  collectCoverageFrom: [
+    "src/**/*.{js,jsx,ts,tsx}",
+    "!<rootDir>/node_modules/"
+  ],
+  coverageThreshold: {
+    "global": {
+      "lines": 90,
+      "statements": 90
+    }
+  }
 
   // An array of regexp pattern strings used to skip coverage collection
   // coveragePathIgnorePatterns: [
