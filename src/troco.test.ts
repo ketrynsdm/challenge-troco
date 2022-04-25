@@ -19,4 +19,8 @@ describe('Testando as funcionalidades do Troco', () => {
         const resultValue = 5
         expect(result(10, 15)).toEqual(resultValue);
     });
+    it('Valor do pago é menor do que o valor do produto', () => {
+        const resultmenor = -10
+        expect(result(20, 10)).toEqual(resultmenor);
+    });
 })
