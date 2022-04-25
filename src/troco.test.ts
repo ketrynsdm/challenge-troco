@@ -2,7 +2,23 @@ import { result, moedas } from "./troco.ts";
 
 
 describe('Testando as funcionalidades do Troco', () => {
-    it("Deve receber o valor das moedas", () => {
+    it("Deve receber o valor das moedas de:", () => {
+        const result = { "0.05": 1, "0.1": 0, "0.25": 0, "0.5": 0, "1": 0, "10": 0, "100": 0, "2": 0, "20": 0, "5": 0, "50": 0 }
+        expect(moedas(0.05)).toMatchObject(result);
+    });
+    it("Deve receber o valor das moedas de:", () => {
+        const result = { "0.05": 0, "0.1": 1, "0.25": 0, "0.5": 0, "1": 0, "10": 0, "100": 0, "2": 0, "20": 0, "5": 0, "50": 0 }
+        expect(moedas(0.1)).toMatchObject(result);
+    });
+    it("Deve receber o valor das moedas de:", () => {
+        const result = { "0.05": 0, "0.1": 0, "0.25": 1, "0.5": 0, "1": 0, "10": 0, "100": 0, "2": 0, "20": 0, "5": 0, "50": 0 }
+        expect(moedas(0.25)).toMatchObject(result);
+    });
+    it("Deve receber o valor das moedas de:", () => {
+        const result = { "0.05": 0, "0.1": 0, "0.25": 0, "0.5": 1, "1": 0, "10": 0, "100": 0, "2": 0, "20": 0, "5": 0, "50": 0 }
+        expect(moedas(0.5)).toMatchObject(result);
+    });
+    it("Deve receber o valor das moedas de:", () => {
         const result = { "0.05": 0, "0.1": 0, "0.25": 1, "0.5": 1, "1": 0, "10": 0, "100": 0, "2": 0, "20": 0, "5": 0, "50": 0 }
         expect(moedas(0.75)).toMatchObject(result);
     });
