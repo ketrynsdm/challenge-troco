@@ -3,11 +3,11 @@ import { result, moedas } from "./troco.ts";
 
 describe('Testando as funcionalidades do Troco', () => {
     it("Deve receber notas no valor de 100, 50, 20, 10, 5, 2 para o troco de 187", () => {
-        const result = { "0.05": 0, "0.1": 0, "0.25": 0, "0.5": 0, "1": 0, "10": 1, "100": 1, "2": 1, "20": 1, "5": 1, "50": 1 }
+        const result = { "10": 1, "100": 1, "2": 1, "20": 1, "5": 1, "50": 1 }
         expect(moedas(187)).toMatchObject(result);
     });
     it('Deve receber moedas no valor de 0.05, 0.1, 0.25, 0.5, 1, para o troco de 1,90', () => {
-        const result = { "0.05": 1, "0.1": 1, "0.25": 1, "0.5": 1, "1": 1, "10": 0, "100": 0, "2": 0, "20": 0, "5": 0, "50": 0 }
+        const result = { "0.05": 1, "0.1": 1, "0.25": 1, "0.5": 1, "1": 1 }
         expect(moedas(1.9)).toMatchObject(result);
     });
 
